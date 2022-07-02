@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+   - name: ping all nodes
+     ping:
+   - name: install webserver 
+     apt: name=apache2 state=present
+   - name: install git on all the servers
+     apt: name=git state=present
+   - name: install tree on both the nodes
+     apt: name=tree state=present
