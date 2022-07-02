@@ -1,0 +1,5 @@
+---
+ubuntu_webserver : apache
+redhat_webserver : httpd 
+java_for_ubuntu_jre: openjdk-8-jre
+java_for_redhat_jdk: openjdk-8-jdk

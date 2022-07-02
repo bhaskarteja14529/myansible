@@ -1,0 +1,12 @@
+---
+- hosts: become
+  become: yes
+  tasks:
+  - name: install open jdk on red hat machine
+    apt: name=java_for_redhat_jdk state=present 
+    when: ansible_os_family == "RedHat"
+
+  - name: install open jre on ubuntu machine
+    apt: name=java_for_ubuntu_jr state=present
+    when: ansible_os_family == "Debian"
+    
